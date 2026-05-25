@@ -6,7 +6,7 @@ const JUMP_VELOCITY = 4.5
 @onready var Pivot := $Pivot
 @onready var Camera := $Pivot/Camera3D
 @onready var Raycast = $Pivot/Camera3D/RayCast3D
- 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
