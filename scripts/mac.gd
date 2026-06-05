@@ -1,10 +1,13 @@
 extends StaticBody3D
 
-class_name Interact
+class_name Mac
+
 signal interacted(body)
 
 @export var prompt_message = "Interact"
 @export var prompt_action = "interact"
+@export var cam: Camera3D
+#@onready cam mac.cam
 
 func get_prompt():
 	var _key_name = ""
@@ -12,7 +15,7 @@ func get_prompt():
 		if action is InputEventKey:
 			_key_name = OS.get_keycode_string(action.keycode)
 	return prompt_message + ""
-	
+
 
 func interact(body):
 	emit_signal("interacted", body)

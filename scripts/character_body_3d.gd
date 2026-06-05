@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+@export var mac: StaticBody3D
 @onready var Pivot := $Pivot
 @onready var Camera := $Pivot/Camera3D
 @onready var Raycast = $Pivot/Camera3D/RayCast3D

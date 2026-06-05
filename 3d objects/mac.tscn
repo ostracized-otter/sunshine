@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bcjwcutaj05lh"]
+
+[ext_resource type="Script" uid="uid://bmwodr6in1lvr" path="res://scripts/mac.gd" id="1_8dm4l"]
+[ext_resource type="PackedScene" uid="uid://p4dka2vepffc" path="res://3d objects/fdsa.glb" id="1_dedw8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dedw8"]
+size = Vector3(4.1209106, 3.9267578, 2.5457764)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=372185022 node_paths=PackedStringArray("cam")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("1_8dm4l")
+cam = NodePath("maccam")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1057600385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33700567, 1.4633789, 0.7728882)
+shape = SubResource("BoxShape3D_dedw8")
+
+[node name="fdsa" parent="." unique_id=1588209881 instance=ExtResource("1_dedw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4917605, 0, 0.6019912)
+
+[node name="maccam" type="Camera3D" parent="." unique_id=439905340]
+transform = Transform3D(-3.2149906e-08, -1.4955974, 0.73550373, -6.537467e-08, 0.73550373, 1.4955974, -1.6666665, 0, -7.285235e-08, 1.4386106, 3.2903295, 0.6262604)

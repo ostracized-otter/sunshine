@@ -14,3 +14,7 @@ func _on_dialogue_box_dialogue_ended() -> void:
 	player.set_physics_process(true)
 	player.set_process_input(false)
 	player = null
+
+
+func _on_static_body_3d_3_interacted(body: Variant) -> void:
+	pass

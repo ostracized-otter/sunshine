@@ -3,12 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dmeymcwh7erir" path="res://3d objects/node_3d.tscn" id="1_sv7il"]
 [ext_resource type="PackedScene" uid="uid://yg3th5otqq41" path="res://characters/player.tscn" id="2_jmeov"]
 [ext_resource type="PackedScene" uid="uid://x00j0ljmhri" path="res://3d objects/static_body_3d.tscn" id="3_44eiw"]
-[ext_resource type="Script" uid="uid://bn34glc08cm8r" path="res://areas/canvas_layer.gd" id="4_lvhsi"]
+[ext_resource type="Script" uid="uid://bn34glc08cm8r" path="res://scripts/canvas_layer.gd" id="4_lvhsi"]
 [ext_resource type="Script" uid="uid://by8fmhpldj46a" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_nk1ni"]
 [ext_resource type="Script" uid="uid://m31i3axecagx" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_lvhsi"]
-[ext_resource type="Resource" uid="uid://bm2yakm5em1ve" path="res://test.tres" id="6_ooywv"]
+[ext_resource type="Resource" uid="uid://bm2yakm5em1ve" path="res://dialog/test.tres" id="6_ooywv"]
 [ext_resource type="Script" uid="uid://blmdt7v8bd0nl" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_r83sm"]
 [ext_resource type="Script" uid="uid://bsoctnc26xumr" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_ooywv"]
+[ext_resource type="Resource" uid="uid://cx7rql6tvs71u" path="res://dialog/testt.tres" id="10_gw5e4"]
+[ext_resource type="PackedScene" uid="uid://bcjwcutaj05lh" path="res://3d objects/mac.tscn" id="10_ooywv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,13 +31,22 @@ size = Vector2(20, 20)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pqxyg"]
 data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_gw5e4"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_47vbb"]
 script = ExtResource("5_lvhsi")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_47vbb"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_rr2uu"]
 script = ExtResource("6_r83sm")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_rr2uu"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_cxumu"]
+script = ExtResource("7_ooywv")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ooywv"]
+script = ExtResource("5_lvhsi")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_gw5e4"]
+script = ExtResource("6_r83sm")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_3qiqs"]
 script = ExtResource("7_ooywv")
 
 [node name="Node3D" type="Node3D" unique_id=821890179]
@@ -97,8 +108,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6383786, 1, 4.329941)
 [node name="Node3D2" parent="." unique_id=353333257 instance=ExtResource("1_sv7il")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03486076, -0.3301401, 4.907938)
 
-[node name="Node3D3" parent="." unique_id=1433635391 instance=ExtResource("2_jmeov")]
+[node name="Node3D3" parent="." unique_id=1433635391 node_paths=PackedStringArray("mac") instance=ExtResource("2_jmeov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mac = NodePath("../StaticBody3D3")
 
 [node name="StaticBody3D" parent="." unique_id=734897989 instance=ExtResource("3_44eiw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 6)
@@ -106,34 +118,37 @@ prompt_message = "U-U"
 
 [node name="StaticBody3D2" parent="." unique_id=940950406 instance=ExtResource("3_44eiw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
-prompt_message = "AUGHHHHHH"
+prompt_message = "jygiuj"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=119857675]
 script = ExtResource("4_lvhsi")
 
-[node name="DialogueBox" type="Panel" parent="CanvasLayer" unique_id=1962373081]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.716
-anchor_right = 0.5
-anchor_bottom = 0.716
-offset_left = -491.0
-offset_top = -41.968018
-offset_right = -491.0
-offset_bottom = -41.968018
-scale = Vector2(3.1467938, 1.9661776)
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="DialogueBox" type="Panel" parent="CanvasLayer" unique_id=1941698441]
+visible = false
+offset_left = 207.0
+offset_top = 378.0
+offset_right = 922.0
+offset_bottom = 549.0
 script = ExtResource("4_nk1ni")
 data = ExtResource("6_ooywv")
 start_id = "START1"
-default_speaker_color = Color(0.49803922, 1, 1, 1)
 hide_portrait = true
 skip_input_action = "interact"
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_gw5e4"), SubResource("RichTextEffect_47vbb"), SubResource("RichTextEffect_rr2uu")])
-options_alignment = 1
-options_position = 0
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_47vbb"), SubResource("RichTextEffect_rr2uu"), SubResource("RichTextEffect_cxumu")])
 metadata/_custom_type_script = "uid://by8fmhpldj46a"
 
+[node name="DialogueBox2" type="Panel" parent="CanvasLayer" unique_id=1057141513]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_nk1ni")
+data = ExtResource("10_gw5e4")
+start_id = "START1"
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_ooywv"), SubResource("RichTextEffect_gw5e4"), SubResource("RichTextEffect_3qiqs")])
+metadata/_custom_type_script = "uid://by8fmhpldj46a"
+
+[node name="StaticBody3D3" parent="." unique_id=372185022 instance=ExtResource("10_ooywv")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -7, 0, -6)
+
 [connection signal="interacted" from="StaticBody3D2" to="CanvasLayer" method="_on_static_body_3d_2_interacted"]
-[connection signal="dialogue_ended" from="CanvasLayer/DialogueBox" to="CanvasLayer" method="_on_dialogue_box_dialogue_ended"]
+[connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]
