@@ -7,6 +7,7 @@ var cam : Camera3D
 @onready var Prompt = $CanvasLayer/Prompt
 @export var prompt = Prompt
 
+var ingame = 0
 var last_animation: String
 var hovering = 0
 
@@ -28,40 +29,30 @@ func _physics_process(_delta):
 			#pcam.make_current()
 			if Input.is_action_pressed("interact"):
 				cam.make_current()
+				#disable inspect animation
+				ingame = 1
+				$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
 				
 			hover()
 			
 		
 	else:
 		hoverback()
+	if Input.is_action_just_pressed("quit") and ingame == 1:
+		pcam.make_current()
 		
 func hover():
-	if hovering == 0:
+	if hovering == 0 and ingame == 0:
 		$CanvasLayer/TextureRect/AnimationPlayer.play("hover")
 		hovering += 1
 	elif hovering == 1:
 		pass
 	
 func hoverback():
-	if hovering == 1:
+	if hovering == 1 and ingame == 0:
 		$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
 		hovering -= 1
 	elif hovering == 1:
 		pass
 	
-	
-	
-			
-			#if not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hover" and not last_animation == "hover":
-				#
-				#$CanvasLayer/TextureRect/AnimationPlayer.play("hover")
-				#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
-				#if Input.is_action_just_pressed(detected.prompt_action):
-					#detected.interact(owner)
-		#elif not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hoverback" and not last_animation == "hoverback":
-			#$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
-			#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
-	#elif not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hoverback" and not last_animation == "hoverback":
-		#$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
-		#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
 	
