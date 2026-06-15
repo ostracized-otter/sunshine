@@ -1,6 +1,5 @@
 extends RayCast3D
-#@onready var playercam = $Node3D/CharacterBody3D/Pivot/Camera3D
-#@onready var maccam = $maccam
+
 var cam : Camera3D
 @export var pcam : Camera3D
 @export var player : CharacterBody3D
@@ -24,9 +23,6 @@ func _physics_process(_delta):
 			Prompt.text = detected.get_prompt()
 			hover()
 		if detected is Mac:
-			#get_tree().change_scene_to_file("res://3d objects/mac.tscn")
-			#start game
-			#pcam.make_current()
 			if Input.is_action_pressed("interact"):
 				cam.make_current()
 				#disable inspect animation
@@ -40,6 +36,7 @@ func _physics_process(_delta):
 		hoverback()
 	if Input.is_action_just_pressed("quit") and ingame == 1:
 		pcam.make_current()
+		ingame = 0
 		
 func hover():
 	if hovering == 0 and ingame == 0:
