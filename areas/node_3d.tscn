@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bn34glc08cm8r" path="res://scripts/canvas_layer.gd" id="4_lvhsi"]
 [ext_resource type="Script" uid="uid://by8fmhpldj46a" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_nk1ni"]
 [ext_resource type="Script" uid="uid://m31i3axecagx" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_lvhsi"]
-[ext_resource type="Resource" uid="uid://bm2yakm5em1ve" path="res://dialog/test.tres" id="6_ooywv"]
+[ext_resource type="Resource" uid="uid://bm2yakm5em1ve" path="res://test.tres" id="6_ooywv"]
 [ext_resource type="Script" uid="uid://blmdt7v8bd0nl" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_r83sm"]
 [ext_resource type="Script" uid="uid://bsoctnc26xumr" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_ooywv"]
 [ext_resource type="Resource" uid="uid://cx7rql6tvs71u" path="res://dialog/testt.tres" id="10_gw5e4"]
