@@ -41,7 +41,6 @@ func _physics_process(_delta):
 	
 func hover():
 	if hovering == 0 and ingame == 0:
-		print(ingame)
 		$CanvasLayer/TextureRect/AnimationPlayer.play("hover")
 		hovering += 1
 	elif hovering == 1:
@@ -53,20 +52,4 @@ func hoverback():
 		hovering -= 1
 	elif hovering == 1:
 		pass
-	
-	
-	
-			
-			#if not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hover" and not last_animation == "hover":
-				#
-				#$CanvasLayer/TextureRect/AnimationPlayer.play("hover")
-				#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
-				#if Input.is_action_just_pressed(detected.prompt_action):
-					#detected.interact(owner)
-		#elif not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hoverback" and not last_animation == "hoverback":
-			#$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
-			#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
-	#elif not $CanvasLayer/TextureRect/AnimationPlayer.current_animation == "hoverback" and not last_animation == "hoverback":
-		#$CanvasLayer/TextureRect/AnimationPlayer.play("hoverback")
-		#last_animation = $CanvasLayer/TextureRect/AnimationPlayer.current_animation
 	

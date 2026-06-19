@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bsoctnc26xumr" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_ooywv"]
 [ext_resource type="Resource" uid="uid://cx7rql6tvs71u" path="res://dialog/testt.tres" id="10_gw5e4"]
 [ext_resource type="PackedScene" uid="uid://bcjwcutaj05lh" path="res://3d objects/mac.tscn" id="10_ooywv"]
+[ext_resource type="PackedScene" uid="uid://wfvt5ckpq0rd" path="res://3d objects/ball.tscn" id="12_47vbb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -149,6 +150,9 @@ metadata/_custom_type_script = "uid://by8fmhpldj46a"
 
 [node name="StaticBody3D3" parent="." unique_id=372185022 instance=ExtResource("10_ooywv")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -7, 0, -6)
+
+[node name="RigidBody3D" parent="." unique_id=1238501811 instance=ExtResource("12_47vbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61618185, 4.7491336, 4.297757)
 
 [connection signal="interacted" from="StaticBody3D2" to="CanvasLayer" method="_on_static_body_3d_2_interacted"]
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]
