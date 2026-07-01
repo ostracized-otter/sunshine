@@ -21,6 +21,10 @@ func _physics_process(_delta):
 			
 			Prompt.text = detected.get_prompt()
 			hover()
+		if detected is test:
+			hover()
+			if Input.is_action_pressed("interact"):
+				pass
 		if detected is Mac:
 
 			if Input.is_action_pressed("interact"):

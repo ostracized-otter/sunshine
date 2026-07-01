@@ -7,7 +7,7 @@ signal interacted(body)
 @export var prompt_message = "Interact"
 @export var prompt_action = "interact"
 @export var cam: Camera3D
-#@onready cam mac.cam
+
 
 func get_prompt():
 	var _key_name = ""
@@ -22,9 +22,12 @@ func interact(body):
 
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_left"):
-		var tween = get_tree().create_tween()
-		tween.tween_property($Node3D, "rotation", Vector3(0, deg_to_rad(-60), 0), 0.02)
-	if Input.is_action_just_released("ui_left"):
-		var tween = get_tree().create_tween()
-		tween.tween_property($Node3D, "rotation", Vector3(0, deg_to_rad(0), 0), 0.1)
+	if Input.is_action_pressed("ui_left"):
+		$RigidBody3D2.linear_velocity.x = -10
+	
+		
+		#var tween = get_tree().create_tween()
+		#tween.tween_property($Node3D, "rotation", Vector3(0, deg_to_rad(-60), 0), 0.02)
+	#if Input.is_action_just_released("ui_left"):
+		#var tween = get_tree().create_tween()
+		#tween.tween_property($Node3D, "rotation", Vector3(0, deg_to_rad(20), 0), 0.1)

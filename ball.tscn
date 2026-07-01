@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dqc527p7rr0vd"]
+
+[ext_resource type="PackedScene" uid="uid://mo7342idoywe" path="res://3d objects/ball.glb" id="1_x8fbi"]
+
+[node name="ball" unique_id=2108862261 instance=ExtResource("1_x8fbi")]
