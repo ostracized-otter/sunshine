@@ -38,7 +38,10 @@ size = Vector3(3.2299805, 0.3227539, 2.0025024)
 size = Vector3(1, 3.6938477, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y76ta"]
-size = Vector3(0.21142578, 0.8154907, 0.16305542)
+size = Vector3(0.2956543, 0.8154907, 0.3784027)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2wpg6"]
+size = Vector3(0.04534912, 0.13031006, 0.05996704)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wmt6f"]
 
@@ -49,7 +52,7 @@ script = ExtResource("1_8dm4l")
 cam = NodePath("maccam")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1057600385]
-transform = Transform3D(0.9995518, 0.029938782, 0, -0.029938782, 0.9995518, 0, 0, 0, 1, 1.0266291, 0.71931887, 0.77288806)
+transform = Transform3D(0.9995518, 0.029938782, 0, -0.029938782, 0.9995518, 0, 0, 0, 1, 1.0266291, 0.3085022, 0.77288806)
 shape = SubResource("BoxShape3D_dedw8")
 
 [node name="maccam" type="Camera3D" parent="." unique_id=439905340]
@@ -134,7 +137,7 @@ transform = Transform3D(0.983212, 0.18246701, 0, -0.18246701, 0.983212, 0, 0, 0,
 shape = SubResource("BoxShape3D_wmt6f")
 
 [node name="PinJoint3D" type="PinJoint3D" parent="." unique_id=1289882335]
-transform = Transform3D(1, 0, 0, 0, 0.7167974, 0, 0, 0, 1.3319433, 1.5470341, 1.8190567, -0.2754811)
+transform = Transform3D(1, 0, 0, 0, 0.7167974, 0, 0, 0, 1.3319433, 1.9280097, 1.5060529, 0.50073075)
 node_a = NodePath("../RigidBody3D2")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1788072205]
@@ -152,18 +155,22 @@ visible = false
 mesh = SubResource("BoxMesh_kcl2j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=224397690]
-transform = Transform3D(1, -5.9604645e-07, 6.2864274e-07, 5.9604645e-07, 1, 2.980258e-08, -6.2864274e-07, -2.9802207e-08, 1, -0.065674186, -0.8390194, -0.06391561)
+transform = Transform3D(0.15, -9.313226e-08, 9.4179995e-08, 7.4505806e-08, 0.14999996, 1.3969839e-09, -1.1315569e-07, -7.450581e-09, 0.15, 0.11671114, -0.98252153, -0.3035432)
 shape = SubResource("BoxShape3D_y76ta")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D2" unique_id=1999730635]
+transform = Transform3D(1, -4.172325e-07, -1.0617077e-07, 5.9604645e-07, 1, 7.1153045e-07, -6.0070306e-07, -2.9802322e-08, 0.9999693, 0.116659045, -0.9768162, -0.30443668)
+mesh = SubResource("BoxMesh_2wpg6")
+
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=1783292494]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4579086, 1.8558214, 0.34646487)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.0327408, 1.4682107, 0.56146866)
 shape = SubResource("CylinderShape3D_wmt6f")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=431874784]
 collision_layer = 4
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=988980980]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65646577, 1.5849199, 0.8975055)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.8060436, 1.3954437, 0.5728191)
 shape = SubResource("CylinderShape3D_q23bc")
 
 [node name="board1" parent="." unique_id=103214347 instance=ExtResource("5_yg4ue")]
