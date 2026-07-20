@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bcjwcutaj05lh" path="res://3d objects/mac.tscn" id="10_ooywv"]
 [ext_resource type="PackedScene" uid="uid://wfvt5ckpq0rd" path="res://3d objects/ball.tscn" id="12_47vbb"]
 [ext_resource type="PackedScene" uid="uid://d33er5sl0aqan" path="res://3d objects/static_body_3d (2).tscn" id="13_rr2uu"]
+[ext_resource type="PackedScene" uid="uid://c1g7wi12wchi7" path="res://3d objects/door.glb" id="14_cxumu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -156,6 +157,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61618185, 4.7491336, 4.297
 
 [node name="StaticBody3D4" parent="." unique_id=1692365766 instance=ExtResource("13_rr2uu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -2)
+
+[node name="door" parent="." unique_id=1206420277 instance=ExtResource("14_cxumu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
 
 [connection signal="interacted" from="StaticBody3D2" to="CanvasLayer" method="_on_static_body_3d_2_interacted"]
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]

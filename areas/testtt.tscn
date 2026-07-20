@@ -8,8 +8,10 @@
 [ext_resource type="Script" uid="uid://blmdt7v8bd0nl" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="8_h42ii"]
 [ext_resource type="Script" uid="uid://bsoctnc26xumr" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="9_36n6t"]
 [ext_resource type="Resource" uid="uid://cx7rql6tvs71u" path="res://dialog/testt.tres" id="10_d2ms1"]
+[ext_resource type="PackedScene" uid="uid://prp3k3ufv52m" path="res://3d objects/bplacehold.glb" id="11_kucod"]
 [ext_resource type="PackedScene" uid="uid://bcjwcutaj05lh" path="res://3d objects/mac.tscn" id="11_r7jvo"]
 [ext_resource type="PackedScene" uid="uid://wfvt5ckpq0rd" path="res://3d objects/ball.tscn" id="12_ihsn6"]
+[ext_resource type="PackedScene" uid="uid://cl4go06am56vj" path="res://3d objects/door.tscn" id="12_tt3a4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -55,7 +57,6 @@ environment = SubResource("Environment_670rb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=774804939]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 7, -13)
-light_energy = 0.208
 shadow_enabled = true
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=313427273]
@@ -65,6 +66,15 @@ mesh = SubResource("PlaneMesh_pqxyg")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5" unique_id=405214413]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D" unique_id=465418789]
+shape = SubResource("ConcavePolygonShape3D_pqxyg")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D5" unique_id=821818104]
+transform = Transform3D(1.0618608, 1.2992667e-14, -1.036317e-07, 0, -1.7000006, -1.0363165e-07, 9.283081e-08, -1.486188e-07, 1.185408, 0, 2, 0)
+mesh = SubResource("PlaneMesh_pqxyg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5/MeshInstance3D5" unique_id=361224397]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/MeshInstance3D5/StaticBody3D" unique_id=1235919726]
 shape = SubResource("ConcavePolygonShape3D_pqxyg")
 
 [node name="Node3D3" parent="." unique_id=1433635391 node_paths=PackedStringArray("mac") instance=ExtResource("2_m0hr5")]
@@ -132,12 +142,21 @@ mesh = SubResource("PlaneMesh_pqxyg")
 shape = SubResource("ConcavePolygonShape3D_pqxyg")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=1119377340]
-transform = Transform3D(-2.0402373e-08, 0.9999998, -6.2970615e-09, 3.4264468e-22, -4.371139e-08, -0.14406, -0.4667519, -4.3711378e-08, 2.752532e-16, -4, 1, 0)
+transform = Transform3D(-2.0402373e-08, 0.9999998, -6.2970615e-09, 3.4264468e-22, -4.371139e-08, -0.14406, -0.4667519, -4.3711378e-08, 2.752532e-16, -2.5169435, 1, 0)
 mesh = SubResource("PlaneMesh_pqxyg")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D9" unique_id=1580750229]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D9/StaticBody3D" unique_id=1662837221]
 shape = SubResource("ConcavePolygonShape3D_pqxyg")
+
+[node name="bplacehold" parent="." unique_id=771754332 instance=ExtResource("11_kucod")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.405765, 0.16125607, 1.7859108)
+
+[node name="bplacehold2" parent="." unique_id=1703966958 instance=ExtResource("11_kucod")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.3454335, 0.2105155, -1.9315535)
+
+[node name="StaticBody3D" parent="." unique_id=280698384 instance=ExtResource("12_tt3a4")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -0.9350611, 0, -3.036891)
 
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]

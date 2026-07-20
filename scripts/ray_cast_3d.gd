@@ -25,6 +25,8 @@ func _physics_process(_delta):
 			hover()
 			if Input.is_action_pressed("interact"):
 				pass
+		if detected is door:
+			hover()
 		if detected is Mac:
 
 			if Input.is_action_pressed("interact"):
