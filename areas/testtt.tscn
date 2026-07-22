@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://xm4nd3rihqf4"]
 
-[ext_resource type="PackedScene" uid="uid://nyynorwivr5d" path="res://3d objects/placeholderc.glb" id="1_m0hr5"]
 [ext_resource type="PackedScene" uid="uid://yg3th5otqq41" path="res://characters/player.tscn" id="2_m0hr5"]
 [ext_resource type="Script" uid="uid://bn34glc08cm8r" path="res://scripts/canvas_layer.gd" id="4_8bb2v"]
 [ext_resource type="Script" uid="uid://by8fmhpldj46a" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="5_wngys"]
@@ -14,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://wfvt5ckpq0rd" path="res://3d objects/ball.tscn" id="12_ihsn6"]
 [ext_resource type="PackedScene" uid="uid://cl4go06am56vj" path="res://3d objects/door.tscn" id="12_tt3a4"]
 [ext_resource type="PackedScene" uid="uid://c0egr5y2yyxhd" path="res://3d objects/pholder.glb" id="14_wx2gi"]
+[ext_resource type="PackedScene" uid="uid://gil2r0fkq4oi" path="res://3d objects/Untitle.glb" id="15_8bb2v"]
 [ext_resource type="PackedScene" uid="uid://bjp7t2k3a7yv2" path="res://3d objects/lplc.glb" id="15_wx2gi"]
+[ext_resource type="PackedScene" uid="uid://m3oyfk7i3kcu" path="res://3d objects/Untitlfefd.glb" id="16_8bb2v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_top_color = Color(0.24843827, 0.25879332, 0.28261617, 1)
@@ -37,12 +38,6 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 volumetric_fog_albedo = Color(0.5589535, 0.5589535, 0.5589535, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_pqxyg"]
-size = Vector2(20, 20)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pqxyg"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
-
 [sub_resource type="RichTextEffect" id="RichTextEffect_47vbb"]
 script = ExtResource("7_axnq1")
 
@@ -61,6 +56,12 @@ script = ExtResource("8_h42ii")
 [sub_resource type="RichTextEffect" id="RichTextEffect_3qiqs"]
 script = ExtResource("9_36n6t")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_pqxyg"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pqxyg"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
 [node name="Node3D" type="Node3D" unique_id=821890179]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1346278534]
@@ -70,27 +71,6 @@ environment = SubResource("Environment_670rb")
 transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0.00788641, 3.5686088, 0.099434614)
 light_color = Color(0.9959088, 0.99999994, 0.76593155, 1)
 shadow_enabled = true
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=313427273]
-transform = Transform3D(0.46675196, 0, 0, 0, 1, 0, 0, 0, 0.32928002, 0, 0, 0)
-mesh = SubResource("PlaneMesh_pqxyg")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5" unique_id=405214413]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D" unique_id=465418789]
-shape = SubResource("ConcavePolygonShape3D_pqxyg")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D5" unique_id=821818104]
-transform = Transform3D(1.0618608, 1.2992667e-14, -1.036317e-07, 0, -1.7000006, -1.0363165e-07, 9.283081e-08, -1.486188e-07, 1.185408, 0, 2, 0)
-mesh = SubResource("PlaneMesh_pqxyg")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5/MeshInstance3D5" unique_id=361224397]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/MeshInstance3D5/StaticBody3D" unique_id=1235919726]
-shape = SubResource("ConcavePolygonShape3D_pqxyg")
-
-[node name="placeholderc" parent="MeshInstance3D5" unique_id=427388325 instance=ExtResource("1_m0hr5")]
-transform = Transform3D(0.40000015, 0, 0, 0, 0.186, 0, 0, 0, 0.568, -5.337985, 1.4042454, -0.39485595)
 
 [node name="Node3D3" parent="." unique_id=1433635391 node_paths=PackedStringArray("mac") instance=ExtResource("2_m0hr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
@@ -185,5 +165,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38592458, 0)
 
 [node name="lplc" parent="." unique_id=1194714203 instance=ExtResource("15_wx2gi")]
 transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -0.18757844, 1.8919846, -0.34881103)
+
+[node name="Untitle" parent="." unique_id=1057091075 instance=ExtResource("15_8bb2v")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.96537375, -0.026359424, -0.35474873)
+
+[node name="Untitle" parent="Untitle" unique_id=1112524307 instance=ExtResource("15_8bb2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.96537375, 3.9795158, 0.8906555)
+
+[node name="Untitlfefd" parent="Untitle" unique_id=754802378 instance=ExtResource("16_8bb2v")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.440415, 0.052718848, 13.154525)
 
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]

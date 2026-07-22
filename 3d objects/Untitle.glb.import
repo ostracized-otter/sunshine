@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dpf0fxgfah84g"
-path="res://.godot/imported/Untitled.glb-83220916883968053dd814b78c6fdca7.scn"
+uid="uid://gil2r0fkq4oi"
+path="res://.godot/imported/Untitle.glb-02bec8c61698001d4c9f60e7a5f5f806.scn"
 
 [deps]
 
-source_file="res://3d objects/Untitled.glb"
-dest_files=["res://.godot/imported/Untitled.glb-83220916883968053dd814b78c6fdca7.scn"]
+source_file="res://3d objects/Untitle.glb"
+dest_files=["res://.godot/imported/Untitle.glb-02bec8c61698001d4c9f60e7a5f5f806.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
