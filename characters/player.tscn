@@ -65,23 +65,20 @@ _data = {
 }
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1677081453]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7383275, 0.20971966, 4.096915)
 script = ExtResource("1_4flbx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=908701462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.733693, 0.7920432, -4.0992103)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_onrkg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2101033138]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.733693, 0.8007474, -4.0992103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("ConvexPolygonShape3D_i3pqv")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=531599562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.4584463, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=838138689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26630712, -0.1992526, 0.05810368)
 
 [node name="RayCast3D" type="RayCast3D" parent="Pivot/Camera3D" unique_id=708010216 node_paths=PackedStringArray("pcam", "player")]
 transform = Transform3D(1, 0, 0, 0, -7.430936e-08, -0.99999994, 0, 1.7, -4.3711385e-08, 0, 0, 0)
