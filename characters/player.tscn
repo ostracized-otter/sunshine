@@ -79,6 +79,7 @@ shape = SubResource("ConvexPolygonShape3D_i3pqv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=838138689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46335042, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Pivot/Camera3D" unique_id=708010216 node_paths=PackedStringArray("pcam", "player")]
 transform = Transform3D(1, 0, 0, 0, -7.430936e-08, -0.99999994, 0, 1.7, -4.3711385e-08, 0, 0, 0)
