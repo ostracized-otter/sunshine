@@ -28,7 +28,10 @@ func _physics_process(_delta):
 		if detected is door:
 			hover()
 			if Input.is_action_pressed("interact"):
-				get_tree().change_scene_to_file("res://areas/node_3d.tscn")
+				get_tree().change_scene_to_file("res://areas/h1.tscn")
+		if detected is barrier:
+			hover()
+			
 		if detected is Mac:
 
 			if Input.is_action_pressed("interact"):

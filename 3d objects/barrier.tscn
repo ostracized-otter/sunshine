@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvsd65sxd2yyn"]
+
+[ext_resource type="PackedScene" uid="uid://diugwd6f2shqw" path="res://3d objects/baritled.glb" id="1_mdpap"]
+[ext_resource type="Script" uid="uid://duh174xq2qpyy" path="res://3d objects/barrier.gd" id="1_u8uux"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wpg6"]
+size = Vector3(1, 2.359253, 5.845154)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1721160039]
+script = ExtResource("1_u8uux")
+
+[node name="baritled" parent="." unique_id=855351476 instance=ExtResource("1_mdpap")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=409793374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3586631, -0.009613037)
+shape = SubResource("BoxShape3D_2wpg6")
