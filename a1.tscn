@@ -108,7 +108,7 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_ooywv"), Sub
 metadata/_custom_type_script = "uid://by8fmhpldj46a"
 
 [node name="StaticBody3D3" parent="." unique_id=372185022 instance=ExtResource("9_anx5c")]
-transform = Transform3D(0.424264, 0, -0.42426407, 0, 0.59999996, 0, 0.42426407, 0, 0.424264, -1, -6, -6)
+transform = Transform3D(0.59999996, 0, -2.9802322e-08, 0, 0.5999999, 0, 2.9802322e-08, 0, 0.59999996, -2, -0.76356333, 5.134137)
 
 [node name="RigidBody3D" parent="." unique_id=1238501811 instance=ExtResource("10_qndsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61618185, 4.7491336, 4.297757)

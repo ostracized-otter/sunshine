@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://blote86cotegp" path="res://3d objects/bouncer.glb" id="6_8r76y"]
 [ext_resource type="Script" uid="uid://cf20uidaj0vmt" path="res://3d objects/bouncer.gd" id="7_k1awj"]
 [ext_resource type="Script" uid="uid://c8aubkp4a5qjd" path="res://3d objects/shooter.gd" id="8_02tnh"]
+[ext_resource type="Script" uid="uid://c7b24ahjpo350" path="res://3d objects/hole.gd" id="9_1a1wf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dedw8"]
 size = Vector3(2.4392166, 1.8728027, 2.5457764)
@@ -54,10 +55,16 @@ size = Vector3(0.04534912, 0.13031006, 0.05996704)
 radius = 1.0146484
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1a1wf"]
-size = Vector3(1.6728516, 1, 1.9602051)
+size = Vector3(1.6728516, 1.8979492, 1.9602051)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kcl2j"]
 size = Vector3(3.0114746, 0.037475586, 1.7612305)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q23bc"]
+size = Vector3(0.08932495, 0.3572693, 0.35308838)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_drr7v"]
+size = Vector3(0.32995605, 0.17707825, 0.28845215)
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=372185022 node_paths=PackedStringArray("cam")]
 script = ExtResource("1_8dm4l")
@@ -70,8 +77,8 @@ shape = SubResource("BoxShape3D_dedw8")
 [node name="maccam" type="Camera3D" parent="." unique_id=439905340]
 transform = Transform3D(-1.9289946e-08, -0.89735854, 0.4413023, -3.9224805e-08, 0.4413023, 0.89735854, -1, 0, -4.371141e-08, 1.9962881, 2.985157, 0.12234235)
 
-[node name="RigidBody3D" parent="." unique_id=1238501811 instance=ExtResource("3_5u1e7")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.18933141, 1.5224185, 0.44701734)
+[node name="RigidBody3D" parent="." unique_id=1238501811 groups=["balla"] instance=ExtResource("3_5u1e7")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.25443935, 1.5224185, 0.0061333477)
 collision_layer = 3
 mass = 0.13
 gravity_scale = 0.626
@@ -224,20 +231,37 @@ shape = SubResource("CylinderShape3D_drr7v")
 
 [node name="bouncer5" parent="." unique_id=437489677 instance=ExtResource("6_8r76y")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 2.0867653, 1.455083, -0.016210973)
+visible = false
 script = ExtResource("8_02tnh")
 
 [node name="Area3D" type="Area3D" parent="bouncer5" unique_id=1781889110]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bouncer5/Area3D" unique_id=400251411]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33642387, 0.4643917, 0.01574707)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33642387, 0.9133663, 0.01574707)
 shape = SubResource("BoxShape3D_1a1wf")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="." unique_id=810121839]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0057373, 1.874515, 0.38061523)
 shape = SubResource("BoxShape3D_kcl2j")
 
+[node name="Node3D3" type="Node3D" parent="." unique_id=1323048228]
+script = ExtResource("9_1a1wf")
+
+[node name="Area3D" type="Area3D" parent="Node3D3" unique_id=526563033]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D3/Area3D" unique_id=294128053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0715842, 1.4417193, 0.64267)
+shape = SubResource("BoxShape3D_q23bc")
+debug_color = Color(0.98039216, 0.101960786, 0.24313726, 0.76862746)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="." unique_id=1060335003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1815531, 1.5176526, -0.010314941)
+shape = SubResource("BoxShape3D_drr7v")
+script = ExtResource("8_02tnh")
+
 [connection signal="body_entered" from="RigidBody3D" to="RigidBody3D" method="_on_body_entered"]
 [connection signal="body_entered" from="bouncer2/Area3D" to="bouncer2" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="bouncer3/Area3D" to="bouncer3" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="bouncer4/Area3D" to="bouncer4" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="bouncer5/Area3D" to="bouncer5" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Node3D3/Area3D" to="RigidBody3D" method="_on_area_3d_body_entered"]

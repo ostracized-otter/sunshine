@@ -2,8 +2,9 @@ extends RigidBody3D
 
 
 
-func _on_body_entered(body: Node) -> void:
-   
-	if is_in_group("balla"):
+
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body == self:
 		print("g")
-	
