@@ -105,10 +105,10 @@ transform = Transform3D(0.424264, 0, -0.42426407, 0, 0.59999996, 0, 0.42426407, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61618185, 4.7491336, 4.297757)
 
 [node name="bplacehold" parent="." unique_id=771754332 instance=ExtResource("11_kucod")]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.405765, 0.16125607, 1.7859108)
+transform = Transform3D(-0.45, 0, -3.934025e-08, 0, 0.45, 0, 3.934025e-08, 0, -0.45, 2.405765, 0.16125607, 1.7859108)
 
 [node name="bplacehold2" parent="." unique_id=1703966958 instance=ExtResource("11_kucod")]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.3454335, 0.2105155, -1.9315535)
+transform = Transform3D(-0.45, 0, 3.934025e-08, 0, 0.45, 0, -3.934025e-08, 0, -0.45, 2.3454335, 0.2105155, -1.9315535)
 
 [node name="StaticBody3D" parent="." unique_id=280698384 instance=ExtResource("12_tt3a4")]
 transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -0.9350611, 0, -3.026349)
@@ -153,6 +153,6 @@ transform = Transform3D(-4.3711367e-08, 0, 0.99999976, 0, 0.99999976, 0, -0.9999
 transform = Transform3D(-0.9999998, 0, -8.742278e-08, 0, 0.9999998, 0, 8.742278e-08, 0, -0.9999998, -19.96688, -1.2465973, -1.1980877)
 
 [node name="placeholderc" parent="." unique_id=427388325 instance=ExtResource("17_wngys")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.5990446, 1.3692659, -0.10992557)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -2.5990446, 1.2723268, -0.10992557)
 
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]
