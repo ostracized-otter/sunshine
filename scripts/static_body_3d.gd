@@ -11,7 +11,7 @@ func get_prompt():
 	for action in InputMap.action_get_events(prompt_action):
 		if action is InputEventKey:
 			_key_name = OS.get_keycode_string(action.keycode)
-	return prompt_message + ""
+	return prompt_message + "Hello"
 	
 
 func interact(body):

@@ -623,6 +623,14 @@ transform = Transform3D(-0.14, 0, -1.2239188e-08, 0, 0.14, 0, 1.2239188e-08, 0, 
 [node name="Untitlefdsad" parent="." unique_id=326810539 instance=ExtResource("17_1sf65")]
 transform = Transform3D(-0.2, 0, -1.7484556e-08, 0, 0.2, 0, 1.7484556e-08, 0, -0.2, 39.032135, 3.0849774, 0)
 
+[node name="AreaLight3D" type="AreaLight3D" parent="Untitlefdsad" unique_id=1852150431]
+transform = Transform3D(-2.1855689e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855689e-07, -0.13121033, 0, -1.1470547e-08)
+light_color = Color(0.35572824, 0.49728858, 0.06549475, 1)
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="Untitlefdsad" unique_id=1914432834]
+transform = Transform3D(-2.1855706e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855706e-07, -0.18933105, 0, -1.6550985e-08)
+light_color = Color(0.35572824, 0.49728858, 0.06549475, 1)
+
 [node name="StaticBody3D37" parent="." unique_id=1721160039 instance=ExtResource("18_ln2hb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.725826, 0, -19)
 

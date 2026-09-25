@@ -23,7 +23,14 @@ func interact(body):
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
-		$RigidBody3D2.linear_velocity.x = -10
+		$RigidBody3D2.linear_velocity.x = -20
+		
+	
+#func _on_flipper_hit(body: Node3D) -> void:
+	#if body is RigidBody3D and Input.is_action_pressed("ui_left"):
+		#
+		#print("Hit")
+		#body.apply_impulse(Vector3(-0.6,0,0))
 	
 		
 		#var tween = get_tree().create_tween()

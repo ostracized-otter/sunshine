@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ds3s2pfxpajb1"]
 
 [ext_resource type="PackedScene" uid="uid://yg3th5otqq41" path="res://characters/player.tscn" id="1_gor3r"]
+[ext_resource type="Script" uid="uid://db1udbdafhplm" path="res://areas/h_2.gd" id="1_yd120"]
 [ext_resource type="Script" uid="uid://bn34glc08cm8r" path="res://scripts/canvas_layer.gd" id="2_4yf7c"]
 [ext_resource type="Script" uid="uid://by8fmhpldj46a" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="3_6br6p"]
 [ext_resource type="Resource" uid="uid://bm2yakm5em1ve" path="res://test.tres" id="4_qju7d"]
@@ -14,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://diugwd6f2shqw" path="res://3d objects/baritled.glb" id="12_6br6p"]
 [ext_resource type="PackedScene" uid="uid://m3oyfk7i3kcu" path="res://3d objects/Untitlfefd.glb" id="13_qju7d"]
 [ext_resource type="PackedScene" uid="uid://cl4go06am56vj" path="res://3d objects/door.tscn" id="14_qju7d"]
+[ext_resource type="PackedScene" uid="uid://bjp7t2k3a7yv2" path="res://3d objects/lplc.glb" id="15_nef7n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_top_color = Color(0.24843827, 0.25879332, 0.28261617, 1)
@@ -54,7 +56,11 @@ script = ExtResource("6_v71cp")
 [sub_resource type="RichTextEffect" id="RichTextEffect_3qiqs"]
 script = ExtResource("7_4ugpy")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wpg6"]
+size = Vector3(1, 7, 22)
+
 [node name="Node3D" type="Node3D" unique_id=821890179]
+script = ExtResource("1_yd120")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1346278534]
 environment = SubResource("Environment_670rb")
@@ -443,4 +449,145 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -109, 0, -3)
 [node name="StaticBody3D" parent="." unique_id=280698384 instance=ExtResource("14_qju7d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6.089868, -108.91178, 0, -4)
 
+[node name="lplc" parent="." unique_id=1194714203 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, 43, 3.3697758, -4)
+
+[node name="lplc2" parent="." unique_id=328368343 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, 33, 3.3697758, -4)
+
+[node name="lplc3" parent="." unique_id=1033933119 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, 23, 3.3697758, -4)
+
+[node name="lplc4" parent="." unique_id=754920430 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, 13, 3.3697758, -4)
+
+[node name="lplc5" parent="." unique_id=1772282285 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, 3, 3.3697758, -4)
+
+[node name="lplc6" parent="." unique_id=1968849552 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -7, 3.3697758, -4)
+
+[node name="lplc7" parent="." unique_id=438503140 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -17, 3.3697758, -4)
+
+[node name="lplc8" parent="." unique_id=1498791558 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -34, 3.3697758, -4)
+
+[node name="lplc9" parent="." unique_id=1824653196 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -44, 3.3697758, -4)
+
+[node name="lplc10" parent="." unique_id=1802661608 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -54, 3.3697758, -4)
+
+[node name="lplc11" parent="." unique_id=1102281856 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -64, 3.3697758, -4)
+
+[node name="lplc12" parent="." unique_id=1849863359 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -74, 3.3697758, -4)
+
+[node name="lplc13" parent="." unique_id=1710667660 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -84, 3.3697758, -4)
+
+[node name="lplc14" parent="." unique_id=227732526 instance=ExtResource("15_nef7n")]
+transform = Transform3D(-6.119594e-09, 0, 0.14, 0, 0.14, 0, -0.14, 0, -6.119594e-09, -94, 3.3697758, -4)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=906558412]
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="Node3D" unique_id=2126720832]
+transform = Transform3D(1, 0, 0, 0, 0.013451205, 0.988888, 0, -5.7436347, 0.002315909, 42.97645, 3.357383, -3.9497316)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="Node3D" unique_id=531679911]
+transform = Transform3D(1, 0, 0, 0, 0.013451205, 0.988888, 0, -5.7436347, 0.002315909, 33, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="Node3D" unique_id=1929173260]
+transform = Transform3D(1, 0, 0, 0, 0.013451205, 0.988888, 0, -5.7436347, 0.002315909, 23, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="Node3D" unique_id=1503017406]
+transform = Transform3D(1, 0, 0, 0, 0.013451205, 0.988888, 0, -5.7436347, 0.002315909, 23, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="Node3D" unique_id=1597642580]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.0023419263, 12.976452, 3.357383, -3.9497316)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Node3D" unique_id=505998544]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.0023419263, 3, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Node3D" unique_id=559505647]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.0023419263, -7, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Node3D" unique_id=792500364]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.0023419263, -7, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Node3D" unique_id=1030163887]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -17.023548, 3.357383, -3.9497316)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Node3D" unique_id=2002392784]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -34, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Node3D" unique_id=19785433]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -44, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Node3D" unique_id=1265113238]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -64.023544, 3.357383, -3.9497316)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Node3D" unique_id=88230664]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -74, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="Node3D" unique_id=535017886]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -84, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="Node3D" unique_id=1863831965]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -84, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="Node3D" unique_id=245418837]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -94, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D13_5" type="SpotLight3D" parent="Node3D" unique_id=693553627]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -44, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="SpotLight3D12a" type="SpotLight3D" parent="Node3D" unique_id=295639009]
+transform = Transform3D(1, 0, 0, 0, 0.0023419263, 0.99999726, 0, -0.9999973, 0.002341926, -54, 3.357, -3.95)
+visible = false
+spot_angle = 71.67
+
+[node name="Area3D" type="Area3D" parent="." unique_id=67610983]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=951275122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -8.5)
+shape = SubResource("BoxShape3D_2wpg6")
+
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
