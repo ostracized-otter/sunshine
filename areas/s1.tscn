@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bv50ke2b3j5j0" path="res://3d objects/Untiftled.glb" id="17_w1k5e"]
 [ext_resource type="PackedScene" uid="uid://cqn5qbqrd8t7y" path="res://3d objects/template.glb" id="18_5i1uc"]
 [ext_resource type="PackedScene" uid="uid://cdlu0pc4lwrro" path="res://3d objects/signp1.glb" id="19_dpnce"]
+[ext_resource type="PackedScene" uid="uid://bvpf710wlxbgv" path="res://3d objects/buttonfke.tscn" id="20_8rvy5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pqxyg"]
 sky_top_color = Color(0.24843827, 0.25879332, 0.28261617, 1)
@@ -246,5 +247,52 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -202
 
 [node name="signp1" parent="." unique_id=425121554 instance=ExtResource("19_dpnce")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.9490333, -0.90002954, -13.313764)
+
+[node name="StaticBody3D4" parent="." unique_id=1900612269 instance=ExtResource("20_8rvy5")]
+transform = Transform3D(4.371139e-08, -1, 8.742278e-08, -1, -4.371139e-08, 0, 3.821371e-15, -8.742278e-08, -1, 34.247658, 3.5457895, -6.852545)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=333375214]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 27, 3, -13)
+modulate = Color(1, 0, 0, 1)
+text = "VERY IMPORTANT 
+NCEA APPROVED
+PERSISTANT STORAGE 
+SAVEING BUTTON"
+font_size = 100
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=65902756]
+transform = Transform3D(-0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.7071068, 27, 3, -2)
+modulate = Color(1, 0, 0, 1)
+text = "VERY IMPORTANT 
+PERSISTANT STORAGE 
+SAVEING BUTTON"
+font_size = 100
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=219269869]
+transform = Transform3D(0.642402, 0.4829629, -0.5950349, -0.24999996, 0.8660254, 0.43301272, 0.7244444, -0.1294095, 0.6770772, 27, 5, -2)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+light_volumetric_fog_energy = 4.406
+light_size = 0.223
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1852359230]
+transform = Transform3D(-0.72444445, 0.12940949, -0.6770772, -0.25, 0.86602545, 0.4330127, 0.642402, 0.4829629, -0.59503496, 27, 5, -10)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+light_size = 0.173
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=305021644]
+transform = Transform3D(-0.53349376, 0.24999997, -0.8080126, -0.25000003, 0.86602545, 0.4330127, 0.80801266, 0.43301278, -0.39951912, 29, 10, -9)
+light_color = Color(0.90588236, 1, 0, 1)
+light_energy = 16.0
+light_size = 0.173
+spot_range = 11.872
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=939801045]
+transform = Transform3D(-5.1619136e-08, -0.5, -0.8660254, -2.9802322e-08, 0.8660254, -0.5, 1, 0, -5.9604645e-08, 27, 7, -7)
+modulate = Color(1, 0, 0, 1)
+text = "PRESS BUTTON TO SAVE
+"
+font_size = 200
 
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]

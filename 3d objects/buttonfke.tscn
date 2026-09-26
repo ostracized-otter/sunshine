@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bvpf710wlxbgv"]
+
+[ext_resource type="PackedScene" uid="uid://bpcet2pbljcmx" path="res://3d objects/699754_autosave.glb" id="1_nnb7n"]
+[ext_resource type="Script" uid="uid://bkpcr0frfgks5" path="res://scripts/buttonfke.gd" id="1_o8fmu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2wpg6"]
+height = 1.7618408
+radius = 2.8867188
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1900612269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24765635, -0.45421052, 0.14745498)
+script = ExtResource("1_o8fmu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=453548537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0858765, 0)
+shape = SubResource("CylinderShape3D_2wpg6")
+
+[node name="699754_autosave" parent="." unique_id=396341908 instance=ExtResource("1_nnb7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27439582, 1.7570097, -0.2049346)

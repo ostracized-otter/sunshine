@@ -64,6 +64,29 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7869542, 0, -0.13231456)
 mac = NodePath("../StaticBody3D3")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="Node3D3" unique_id=1763437311]
+visible = false
+offset_left = 16.000004
+offset_top = 442.00003
+offset_right = 850.0
+offset_bottom = 482.00003
+scale = Vector2(2.1840107, 3.5765963)
+
+[node name="Button" type="Button" parent="Node3D3/VBoxContainer2" unique_id=861696868]
+layout_mode = 2
+text = "THIS PRODUCT WILL NOT OPERATE WHEN CONNECTED TO A DEVICE WHICH MAKES UNAUTHORISED COPIES"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node3D3" unique_id=292261001]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(12.405728, 5.651458)
+
+[node name="Label" type="Label" parent="Node3D3/VBoxContainer" unique_id=1928274152]
+layout_mode = 2
+text = "||"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=119857675]
 script = ExtResource("2_accbr")
 
@@ -100,4 +123,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61618185, 4.7491336, 4.297
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=148703185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38592458, 0)
 
+[connection signal="pressed" from="Node3D3/VBoxContainer2/Button" to="Node3D3" method="_on_button_pressed"]
 [connection signal="interacted" from="StaticBody3D3" to="CanvasLayer" method="_on_static_body_3d_3_interacted"]

@@ -1,12 +1,9 @@
 extends StaticBody3D
-
-class_name Mac
-
+class_name button
 signal interacted(body)
 
 @export var prompt_message = "Interact"
 @export var prompt_action = "interact"
-@export var cam: Camera3D
 
 
 func get_prompt():
@@ -15,15 +12,7 @@ func get_prompt():
 		if action is InputEventKey:
 			_key_name = OS.get_keycode_string(action.keycode)
 	return prompt_message + ""
-
+	
 
 func interact(body):
 	emit_signal("interacted", body)
-
-
-func _physics_process(delta: float) -> void:
-	# Controls pinball flipper velocity 
-	if Input.is_action_pressed("ui_left"):
-		$RigidBody3D2.linear_velocity.x = -20
-		
-	
